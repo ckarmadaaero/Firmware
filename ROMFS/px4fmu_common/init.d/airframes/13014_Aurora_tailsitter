@@ -1,0 +1,40 @@
+#!nsh
+#
+# @name Armada prototype Aurora
+# @type VTOL Tailsiter
+# @class VTOL
+#
+# @maintainer CK <ck@armadaaero.com>
+#
+# @output MAIN1 Front right motor
+# @output MAIN2 Rear left motor
+# @output MAIN3 Mid front right motor
+# @output MAIN4 Rear right motor
+# @output MAIN5 Front left motor
+# @output MAIN6 Mid rear left motor
+# @output MAIN7 Mid front left motor
+# @output MAIN8 Mid rear right motor
+# @output AUX1 Elevon 1
+# @output AUX2 Elevon 2
+#
+
+sh /etc/init.d/rc.vtol_defaults
+
+if [ $AUTOCNF == yes ]
+then
+	param set VT_MOT_COUNT 8
+	param set VT_IDLE_PWM_MC 1080
+	param set VT_TRANS_THR 0.75
+	param set VT_TYPE 0
+fi
+
+set MIXER aurora
+set PWM_OUT 12345678
+set PWM_RATE 400
+
+set MIXER_AUX aurora
+set PWM_AUX_RATE 50
+set PWM_AUX_MIN 1000
+set PWM_AUX_MAX 2000
+
+set MAV_TYPE 20
