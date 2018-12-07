@@ -32,7 +32,7 @@
 ############################################################################
 
 set(geometry_files
-        aurora.toml
+	aurora.toml
 	dodeca_bottom_cox.toml
 	dodeca_top_cox.toml
 	hex_cox.toml
