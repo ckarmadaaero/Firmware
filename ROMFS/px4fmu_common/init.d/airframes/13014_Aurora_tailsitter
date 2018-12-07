@@ -25,6 +25,8 @@ then
 	param set VT_MOT_COUNT 8
 	param set VT_TYPE 0
 	param set PWM_RATE 400
+	# param set VT_IDLE_PWM_MC 1080
+	# param set VT_F_TRANS_THR 0.75
 fi
 
 set MAV_TYPE 20
@@ -36,3 +38,4 @@ set PWM_AUX_MIN 1000
 set PWM_AUX_MAX 2000
 
 set PWM_OUT 12345678
+# set PWM_DISARMED 1000
